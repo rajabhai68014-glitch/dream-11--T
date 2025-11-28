@@ -1,20 +1,22 @@
-import axios from 'axios';
+import axios from "axios";
+import { URL } from "../../constants/userConstants";
 
-import { URL } from '../../constants/userConstants';
+// ---- Axios Instances ----
+export const API = axios.create({
+  baseURL: `${URL}`,
+  withCredentials: true,   // 👈 IMPORTANT
+});
 
-export const API = axios.create({ baseURL: `${URL}` });
-const API_NEW = axios.create({ baseURL: `${URL}` });
+export const API_NEW = axios.create({
+  baseURL: `${URL}`,
+  withCredentials: true,   // 👈 IMPORTANT
+});
 
-// for ec2 environment
-// const API = axios.create({ baseURL: 'http://54.84.192.90:8080/api' });
-// const API_NEW = axios.create({ baseURL: 'http://54.84.192.90:8081/api' });
-
+// ---- Interceptor (No Token Needed) ----
 API.interceptors.request.use((req) => {
-  if (localStorage.getItem('user')) {
-    const token = JSON.parse(localStorage.getItem('server_token'));
-    // req.headers.Authorization = `Bearer ${token}`;
-    // req.headers.servertoken = token;
-    // req.headers.ContentType= "application/json";
-  }
+  return req;  // ✔ Cookie automatically जाएगी
+});
+
+API_NEW.interceptors.request.use((req) => {
   return req;
 });
