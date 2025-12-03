@@ -71,11 +71,11 @@ function getfrontendurl() {
   const current = process.env.REACT_APP_API;
 
   if (current === 'local') {
-    return 'http://localhost:3000'; // Local frontend (testing)
+    return 'http://localhost:8000'; // Local frontend (testing)
   }
 
   // 🟢 LIVE FRONTEND URL (Vercel Frontend)
-  return "https://dream-11-t.vercel.app";
+  return "https://web-production-38b54.up.railway.app";
 }
 
 export const URL = geturl();
