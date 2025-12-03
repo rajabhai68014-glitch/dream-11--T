@@ -60,18 +60,18 @@ function geturl() {
   const current = process.env.REACT_APP_API;
 
   if (current === 'local') {
-    return 'http://localhost:8000';  // Local backend (testing)
+    return "https://web-production-38b54.up.railway.app";
   }
 
   // 🟢 LIVE BACKEND URL (Vercel Backend)
-  return "https://dream-11-k.vercel.app";
+  return "https://web-production-38b54.up.railway.app";
 }
 
 function getfrontendurl() {
   const current = process.env.REACT_APP_API;
 
   if (current === 'local') {
-    return 'http://localhost:8000'; // Local frontend (testing)
+    return 'http://localhost:3000'; // Local frontend (testing)
   }
 
   // 🟢 LIVE FRONTEND URL (Vercel Frontend)
