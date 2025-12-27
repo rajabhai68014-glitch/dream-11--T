@@ -15,6 +15,10 @@ export const LOGOUT_FAIL = 'LOGOUT_FAIL';
 
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
+export const ADD_CONFETTI = 'ADD_CONFETTI';
+export const REMOVE_CONFETTI = 'REMOVE_CONFETTI';
+
+
 // ----------------------------
 // 🔥 FINAL WORKING URLS
 // ----------------------------
