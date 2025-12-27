@@ -1,6 +1,9 @@
+
+
 import axios from 'axios';
 
 import {
+ ADD_CONFETTI,
  LOAD_USER_REQUEST,
   LOAD_USER_SUCCESS,
   LOGIN_FAIL,
@@ -91,7 +94,7 @@ export const logout = () => async (dispatch) => {
 
 export const addconfetti = () => async (dispatch) => {
   try {
-    dispatch({ type: ADD_CONFETTI });
+    dispatch({type: ADD_CONFETTI});
   } catch (error) {
     console.log(error.response, 'asdfgh');
     dispatch({ type: LOGIN_FAIL, payload: error.response.data.message });
@@ -100,7 +103,7 @@ export const addconfetti = () => async (dispatch) => {
 
 export const removeconfetti = () => async (dispatch) => {
   try {
-    dispatch({ type: REMOVE_CONFETTI });
+    dispatch({type: REMOVE_CONFETTI});
   } catch (error) {
     console.log(error.response, 'asdfgh');
     dispatch({ type: LOGIN_FAIL, payload: error.response.data.message });
