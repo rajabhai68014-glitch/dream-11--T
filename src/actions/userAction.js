@@ -58,7 +58,7 @@ export const login = (myform) => async (dispatch) => {
   try {
     console.log(myform, 'huccha');
     dispatch({ type: LOGIN_REQUEST });
-    const { data } = await axios.post(`${URL}/auth/logine`, {
+    const { data } = await axios.post(`${URL}/auth/login`, {
       myform,
     });
     localStorage.setItem('token', data.token);
