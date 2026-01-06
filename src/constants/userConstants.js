@@ -61,11 +61,11 @@ export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 // 🌐 PRODUCTION URL CONFIG
 // ===============================
 
-// 🚀 Backend (Railway – LIVE)
-export const URL = "https://web-production-38b54.up.railway.app";
+// 🚀 Backend (Render – LIVE)
+export const URL = "https://dream-11-k.onrender.com";
 
 // 🌍 Frontend (Vercel)
-export const FURL = "https://dream-11-bmoztbxz3-rajabhai68014-glitchs-projects.vercel.app";
+export const FURL = "https://dream-11-t.vercel.app";
 
 // 🎥 Video / Media (backend se serve)
 export const VIDEO_URL = URL;
