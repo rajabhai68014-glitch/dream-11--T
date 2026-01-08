@@ -12,9 +12,9 @@ const API_NEW = axios.create({ baseURL: `${URL}` });
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('user')) {
     const token = JSON.parse(localStorage.getItem('server_token'));
-    // req.headers.Authorization = `Bearer ${token}`;
-    // req.headers.servertoken = token;
-    // req.headers.ContentType = "application/json";
+     req.headers.Authorization = `Bearer ${token}`;
+     req.headers.servertoken = token;
+     req.headers.ContentType = "application/json";
   }
   return req;
 });
